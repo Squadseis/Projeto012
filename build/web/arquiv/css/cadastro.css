@@ -1,0 +1,463 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 9 de fev. de 2024, 19:55:02
+    Author     : nalis
+*/
+body{
+  background-color: rgb(210, 210, 210);
+ font-family: 'Times New Roman', Times, serif;
+}
+:root {
+  --text-dark: #3f1609;
+  --text-light: #7a260f;
+  --primary: #3671fd;
+  --primary-lighter: hsl(240, 33%, 86%);
+  --primary-gradient: linear-gradient(to right, #3671fd, #3671fd);
+}
+
+*::after,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.cadastro-body {
+  font-family: Poppins, sans-serif;
+  min-height: 100vh;
+  background-color: #b0b0b075;
+  display: flex;
+  justify-content: center;
+}
+
+.cadastro-container {
+  max-width: 1070px;
+  width: 80%;
+  display: flex;
+  margin-inline: 1rem;
+}
+
+.image-section {
+  width: 50%;
+  position: relative;
+  margin-top: 1%;
+  margin-bottom: 1%;
+
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.image-wrapper img {
+  object-fit: cover;
+}
+
+.conte-container {
+  background-color: hsla(0, 3%, 94%, 0.3);
+  backdrop-filter: blur(30px);
+  padding: 2.3rem;
+  width: 82%;
+  height: 23%;
+  color: var(--text-dark);
+  border-radius: 4px;
+  border: 1px solid hsl(0 100% 100% / 0.3);
+
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.conte-container h1 {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: -1rem;
+  margin-top: -1.1rem;
+
+}
+
+.conte-container span {
+  background: var(--primary-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 70rem) {
+  .cadastro-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .conte-container {
+    width: 100%;
+  }
+}
+
+.form-section {
+  width: 50%;
+  background-color: rgb(239, 245, 240);
+  padding: 2.5rem 3rem;
+  display: flex;
+  align-items: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.form-wrapper {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.logo-container {
+  width: 8rem;
+  height: 2rem;
+  margin-bottom: 2.2rem;
+}
+
+.logo-container img {
+  border-radius: 50px;
+}
+
+.form-wrapper>h2 {
+  margin-bottom: 0.1rem;
+}
+
+.form-wrapper>p {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.form-group label {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #16164d;
+}
+
+.form-group input {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  padding: 0.5rem;
+  border: 2px solid var(--primary-lighter);
+  border-radius: 0.3rem;
+}
+
+.form-group input:focus {
+  border: 2px solid #16164d;
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.remember-me {
+  display: grid;
+  grid-template-columns: 1rem auto;
+  gap: 0.6rem;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: grid;
+  place-content: center;
+}
+
+.remember-me input {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.3rem;
+  border: 1px solid var(--text-dark);
+  border-radius: 2px;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  background-color: white;
+  transform: scale(0);
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.remember-me input:checked {
+  background: var(--primary-gradient);
+}
+
+.remember-me label {
+  color: var(--text-dark);
+  user-select: none;
+}
+
+.remember-forgot a {
+  color: var(--primary);
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+}
+
+
+.google-btn,
+.google-signin {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+
+  font-weight: 500;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+}
+
+.google-btn {
+  color: white;
+  background: var(--primary-gradient);
+}
+
+.google-btn:hover {
+  opacity: 0.9;
+}
+
+.or-divider {
+  width: 100%;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-block: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.or-divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 1px;
+  width: 45%;
+  background-color: var(--text-light);
+}
+
+.or-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 1px;
+  width: 45%;
+  background-color: var(--text-light);
+}
+
+.google-signin {
+  border: 2px solid var(--primary-lighter);
+}
+
+.google-signin object {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media screen and (max-width: 50rem) {
+  .cadastro-container {
+    max-width: 80%;
+    flex-direction: column;
+    margin-inline: 0;
+  }
+
+  .image-section,
+  .form-section {
+    width: 100%;
+  }
+
+  .image-section {
+    height: 25vh;
+  }
+
+  .conte-container {
+    inset: 0;
+    transform: translate(0, 0);
+    padding: 5.1rem 1.1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .conte-container h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.1rem;
+    margin-top: 1.1rem;
+  }
+
+  .conte-container p {
+    font-size: 1.10rem;
+  }
+
+  .form-section {
+    flex: 1;
+    padding: 1rem 1rem;
+  }
+
+  .logo-container {
+    margin-bottom: 1rem;
+  }
+
+  .form-wrapper>h2 {
+    font-size: 1.25rem;
+  }
+
+  .form-wrapper>p {
+    margin-bottom: 1rem;
+  }
+
+  .form-wrapper button {
+    font-size: 0.875rem;
+  }
+
+  .or-divider {
+    font-weight: 500;
+    margin-block: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 36.25rem) {
+  .cadastro-container {
+    max-width: 100%;
+  }
+
+  .form-wrapper {
+    width: 100%;
+  }
+}
+
+
+/* css para parte do cadastro👇*/
+
+form .field {
+  margin-bottom: 30px;
+}
+
+form .input-field {
+  position: relative;
+  height: 42px;
+  width: 100%;
+}
+
+.input-field input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 0 15px;
+  border: 1px solid #d1d1d1;
+}
+
+.invalid input {
+  border-color: #d93025;
+}
+
+.input-field .show-hide {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #919191;
+  cursor: pointer;
+  padding: 3px;
+}
+
+.field .error {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+  color: #d93025;
+  font-size: 13px;
+  display: none;
+}
+
+.invalid .error {
+  display: flex;
+}
+
+.error .error-icon {
+  margin-right: 6px;
+  font-size: 15px;
+}
+
+.create-password .error {
+  align-items: flex-start;
+}
+
+.create-password .error-icon {
+  margin-top: 4px;
+}
+
+.button {
+  margin: 25px 0 6px;
+}
+
+.button input {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  background: linear-gradient(59deg, #3671fd -1.21%, #3671fd 101.21%, #fff 101.21%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button input:hover {
+  transform: scale(0.9);
+}
+
+.button input:active {
+  transform: scale(0.95);
+}
